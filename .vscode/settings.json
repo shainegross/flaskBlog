@@ -1,0 +1,10 @@
+{
+    "python.defaultInterpreterPath": "./.venv/bin/python",
+    "python.pythonPath": "./.venv/bin/python",
+    "files.associations": {
+        "*.py": "python",
+        "*.html": "html",
+        "*.css": "css",
+        "*.js": "javascript"
+    }
+}

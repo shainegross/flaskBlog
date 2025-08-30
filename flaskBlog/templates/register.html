@@ -2,20 +2,7 @@
 
 {% block content %} 
 <div class="content-section">
-
-    <!-- Debug: Show all form errors -->
-    {% if form.errors %}
-        <div class="alert alert-danger">
-            <strong>Form Errors:</strong>
-            <ul>
-                {% for field, errors in form.errors.items() %}
-                    <li>{{ form[field].label }}: {{ errors | join(', ') }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    {% endif %}
-
-    <form method="POST" action="{{ url_for('register') }}" novalidate>
+    <form method="POST" action="{{ url_for('users.register') }}" novalidate>
         {{ form.hidden_tag() }}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Join Today</legend>
@@ -70,7 +57,7 @@
     </form>
 </div>
 <div class="border-top pt-3">
-    Already have an account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
+    Already have an account? <a class="ml-2" href="{{ url_for('users.login') }}">Sign In</a>
 </div>
 
 {% endblock content %}

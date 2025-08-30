@@ -15,7 +15,7 @@
         </div>
     {% endif %}
 
-    <form method="POST" action="{{ url_for('login') }}" novalidate>
+    <form method="POST" action="{{ url_for('users.login') }}" novalidate>
         {{ form.hidden_tag() }}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Log In</legend>
@@ -49,12 +49,12 @@
         </fieldset>
         <div class="form-group">
             {{ form.submit(class="btn btn-outline-info", type="submit") }}
-            <a href="{{ url_for('reset_request') }}">Forgot Password</a>
+            <a href="{{ url_for('users.reset_request') }}">Forgot Password</a>
         </div>
     </form>
 </div>
 <div class="border-top pt-3">
-    Need an account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up</a>
+    Need an account? <a class="ml-2" href="{{ url_for('users.register') }}">Sign Up</a>
 </div>
 
 {% endblock content %}

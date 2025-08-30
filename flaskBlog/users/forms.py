@@ -7,6 +7,7 @@ from wtforms.validators import DataRequired, Email, EqualTo, Length
 from flaskBlog.models import User
 from wtforms import ValidationError
 
+
 class RegistrationForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(min=2, max=20)])
     email = StringField('Email', validators=[DataRequired(), Email()])
